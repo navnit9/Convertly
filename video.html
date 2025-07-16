@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertly – Free Online File Converter | JPG to PNG, MP3 to WebM, PDF and More</title>
+  <meta name="description" content="Convertly is a free online tool to convert your files quickly – images, audio, videos, and documents. No sign-up needed. Just upload, convert, and download!">
+  <meta name="keywords" content="file converter, image converter, mp3 to webm, jpg to png, docx to pdf, audio converter, convert files online, Convertly">
+  <link rel="canonical" href="https://convertly.com/">
+  <meta property="og:title" content="Convertly – Free Online File Converter">
+  <meta property="og:description" content="Fast and easy tool to convert files: images, audio, video, and documents. No sign-up, no spam.">
+  <meta property="og:image" content="https://postimg.cc/v1dFPCwq"> <!-- Replace with actual cover image URL -->
+  <meta property="og:url" content="https://convertly.com/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="brand">
+    <div class="logo"><img src="assets/logo.png" alt="logo" height="40px" width="40px"></div>
+    <h1>Convertly</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Image Converter</a></li>
+            <li><a href="video.html">Video Converter</a></li>
+            <li><a href="audio.html">Audio Converter</a></li>
+            <li><a href="document.html">Document Converter</a></li>
+        </ul>
+    </nav>
+    <button id="toggle-dark-mode">🌙 Dark Mode</button>
+    </header>
+    <!-- <div class="title"><p>Convert Any File format Fast and East</p></div> -->
+    <main>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div class="detail">
+        <h2>Convert Video File</h2>
+        <h4>Choose a Video and select a format to Convert to.</h4>
+        </div>
+        
+        <div class="breakline"></div>
+
+        <div class="file">
+            <div class="image">
+                <img src="assets/2.png" alt="image" height="60px" width="60px">
+                <label class="label"> Video</label>
+            </div>
+       <label class="custom-file-upload">
+ <input type="file" id="fileInput" name="fileInput" required />
+  Choose File
+</label>
+
+<!-- File name display -->
+<p id="fileNameDisplay" style="margin-left: 10px; font-size: 14px;"></p>
+    </div>
+    <div class="breakline"></div>
+    <div class="function">
+        <div class="info">
+            <h4>Convert to:</h4>
+        </div>   
+        <div class="dropdown">
+            <label for="format">Choose Format:</label>
+                <select name="format" id="format">
+                  <form action="upload.php" method="post" enctype="multipart/form-data">
+                <option value="mp4">MP4</option>
+                <option value="webm">WEBM</option>
+                <option value="mov">MOV</option>
+                <option value="mkv">MKV</option>
+                <option value="3gp">3GP</option>
+                <option value="wmv">WMV</option>
+                <option value="ogv">OGV</option>
+                    </form>
+
+
+                </select>
+        </div>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Convert"> 
+        </div>
+        </form>
+        <div class="description">
+          <h4>🎞️ Free & Secure Video Converter</h4>
+
+<p>Convert MP4, WebM, AVI, MOV, MKV, FLV, and more in seconds.  
+No login, no watermark, no ads.</p>
+
+<p>🔒 Privacy: We don’t store your videos — they’re deleted after conversion.</p>
+<p>📁 Limit: Max file size 100MB, up to 3 videos at once.</p>
+<p>⚡ Fast: Quick processing with high-quality output.</p>
+        </div>
+    </main>
+<footer>
+  <div class="footer-content">
+    <p><strong>Convertly</strong> — Fast & Free Online File Converter</p>
+
+    <ul class="footer-links">
+      <li><a href="audio.html">Audio Converter</a></li>
+      <li><a href="index.html">Image Converter</a></li>
+      <li><a href="document.html">Document Converter</a></li>
+    </ul>
+
+    <p class="copyright">© 2025 Convertly. All rights reserved.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background-color: rgba(193, 187, 187, 0.233);
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header{
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    /* border: 1px solid gray; */
+    margin: 0,0,5px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 10px;
+    font-weight: 900;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+  transition: color 0.3s ease;
+    
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+nav ul li a:hover {
+  color: #3498db;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+form{
+    margin-left: 35%;
+        margin-top: 50px;
+        /* border: 2px solid gray; */
+        height: auto;
+        /* width: 450px;        */
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.detail{
+    margin-left: 6%;
+    margin-top: 21px;
+    /* border: 2px solid gray; */
+    height: auto;
+    width: 382px;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: rgba(255, 255, 254, 0.619); */
+}
+.detail h4{
+    margin-top: 15px;
+}
+/* .breakline{
+    border: 1px solid gray;
+    margin-top: 20px;
+} */
+.file{
+    margin-left: 10%;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    
+    
+}
+.image {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0367aac4;
+  color: white;
+  height: 17px;
+  margin-left: 60px;
+  margin-top: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-file-upload:hover {
+  background-color: #307db0c4;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+.function{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.info{
+    font-weight: 600;
+}
+.dropdown {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown label {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.dropdown select {
+    padding: 1px 1px;
+    font-size: 12px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown select:hover {
+    border-color: #2980b9;
+    background-color: #eef6fc;
+}
+
+.dropdown select:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 4px rgba(26, 188, 156, 0.5);
+}
+.submit{
+    
+    margin-top: 15px;
+    padding: 16px;
+    margin-left: 220px;
+  
+    
+}   
+input[type="submit"]{
+    padding: 5px;
+    border-style: none;
+    background-color: #0367aac4;
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover{
+    background-color: #307db0c4;
+}
+.description {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.description h4 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+.description p {
+    margin: 8px 0;
+    margin-left: auto;
+    font-size: 16px;
+}
+footer {
+    background-color: #1f2937; /* Dark slate */
+    color: #f3f4f6;            /* Light text */
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #93c5fd; /* Soft blue */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #60a5fa; /* Brighter blue on hover */
+}
+
+footer strong {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+footer .copyright {
+    font-size: 14px;
+    color: #9ca3af; /* Muted gray */
+}
+/* Toggle Button */
+#toggle-dark-mode {
+    background-color: #0367aa;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px; /* Makes it pill-shaped */
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+
+#toggle-dark-mode:hover {
+    background-color: #025c99;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+.dark-mode header,
+.dark-mode .description,
+.dark-mode form,
+.dark-mode footer {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    box-shadow: none;
+}
+
+.dark-mode input[type="submit"],
+.dark-mode .custom-file-upload,
+.dark-mode select {
+    
+    background-color: #374151;
+    color: #f3f4f6;
+    border: 1px solid #4b5563;
+}
+
+.dark-mode .footer-links li a {
+    color: #93c5fd;
+}
+.dark-mode nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.dark-mode .custom-file-upload ,.dark-mode input[type="submit"]{
+    background-color: #0367aac4;
+}
+.dark-mode .custom-file-upload:hover ,.dark-mode input[type="submit"]:hover{
+    background-color: #307db0c4;
+}
+.dark-mode div h4{
+    color: white;
+}
+@media (max-width:600px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .custom-file-upload{
+        height: 15px;
+        width: auto;
+    }
+    nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  form {
+    width: 90%;
+    margin: 20px auto;
+  }
+ .detail{
+    width:auto;
+ }
+  .submit {
+    margin-left: 0;
+    text-align: center;
+  }
+    .description {
+    padding: 16px;
+    margin: 10px;
+  }
+  #toggle-dark-mode{
+    position: relative;
+    top: 15px;
+    left: 150px;
+  }
+}
