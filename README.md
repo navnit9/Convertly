@@ -29,4 +29,4 @@ Convertly is a fast and privacy-focused web app that converts files between vari
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/convertly.git
+   git clone https://github.com/navnit9/convertly.git
