@@ -1,16 +1,10 @@
 <?php
-// upload.php
 
-// Enable error reporting for debugging (remove in production)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Set headers to allow cross-origin requests if needed
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Define allowed file types for each converter
+//allowed file types for each converter
 $allowedTypes = [
     'image' => ['jpg', 'jpeg', 'png', 'webp', 'bmp', 'gif'],
     'video' => ['mp4', 'webm', 'mov', 'mkv', '3gp', 'wmv', 'ogv'],
@@ -18,7 +12,7 @@ $allowedTypes = [
     'document' => ['pdf', 'docx', 'doc', 'pptx', 'ppt', 'xlsx', 'xls', 'txt', 'odt', 'rtf']
 ];
 
-// Define max file sizes for each type (in bytes)
+//max file sizes for each type (in bytes)
 $maxSizes = [
     'image' => 25 * 1024 * 1024,       // 25MB
     'video' => 100 * 1024 * 1024,      // 100MB
@@ -28,7 +22,7 @@ $maxSizes = [
 
 // Get the converter type from the referrer URL
 $referrer = parse_url($_SERVER['HTTP_REFERER'] ?? '', PHP_URL_PATH);
-$converterType = 'image'; // default
+$converterType = 'image'; 
 if (strpos($referrer, 'video.html') !== false) {
     $converterType = 'video';
 } elseif (strpos($referrer, 'audio.html') !== false) {
@@ -37,7 +31,7 @@ if (strpos($referrer, 'video.html') !== false) {
     $converterType = 'document';
 }
 
-// Check if file was uploaded
+// if file was uploaded
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['fileInput'])) {
     $file = $_FILES['fileInput'];
     
@@ -88,16 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['fileInput'])) {
         exit;
     }
     
-    // Here you would normally perform the actual file conversion
-    // For this example, we'll just simulate it by copying the file with a new extension
-    
-    // In a real application, you would use appropriate libraries like:
-    // - Imagick/GD for images
-    // - FFmpeg for video/audio
-    // - LibreOffice/other tools for documents
-    
-    // Simulate conversion by copying the file with new extension
-    if (!copy($tempFilePath, $outputFilePath)) {
+   if (!copy($tempFilePath, $outputFilePath)) {
         echo json_encode(['error' => 'Conversion failed']);
         exit;
     }
